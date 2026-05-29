@@ -1,0 +1,20 @@
+[
+    {
+        "id": "Data1",
+        "email": "gomasachandrashekhar@gmail.com",
+        "password": "Gomasa@1988",
+        "validity": "Valid"
+    },
+    {
+        "id": "Data2",
+        "email": "gomasachandrashekhar@gmail.com",
+        "password": "Gomasa@198812",
+        "validity": "invalid"
+    },
+    {
+        "id": "Data3",
+        "email": "gomasachandrashekh@gmail.com",
+        "password": "Gomasa@1988",
+        "validity": "invalid"
+    }
+]

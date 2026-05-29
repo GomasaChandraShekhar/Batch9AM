@@ -1,0 +1,625 @@
+
+JavaScript VS Typescrit :: 
+
+node filename.js
+
+tsx filename.ts
+
+tsc filename.ts
+
+filename.js
+
+node filename.js
+
+var name = 'Shekhar';
+
+var age = 123456;
+
+age = true;
+
+
+Variable :: Memory allocation to store some data.
+
+Declaration of Variable ::
+
+var :: 
+
+Scope :: global, re-declare and re-assign value.
+
+let :: 
+
+Scope :: block and function scoped. re-Declaration not allowed but re-assign a value.
+
+const ::  constant dat
+
+Scope :: block and function scoped. re-Declaration not allowed and no  re-assign a value.
+
+country = 'USA';
+
+codingLang = 'TypeScript';
+
+array, Object
+
+Hoisting :: 
+
+Data Types :: 
+
+Premitive ::
+
+String :: 'Chandra', "Shekhar"  , `Gomasa21312@@^^#^%#`, '234'
+
+Number :: 123, 1399, 4358, 9456459,  122434.234
+
+Boolean :: true, false
+
+Undefined :: 
+
+Null ::  empty
+
+Union :: | 
+
+To declare a variable can hold data of different types.
+
+Syntax ::
+
+let varname: string|number;
+
+varname = 10;
+
+varname='Typescript';
+
+varname = false; // not allowed - Error
+
+
+Operators :: 
+
+1. Assignment operators :: 
+
+= --- Assignment operator
+x += --- x = x + 10;
+x -= ---- x = x-10;
+x *= ---- x = x*10;
+x /= ---- x = x / 10;
+x %= ---- x = x % 10;
+
+
+x += 5;
+
+
+Arithmetic Operators ::
+
+1. Addition ----  + :: Sum of 2 numbers
+2. Subtraction ----- - :: Difference of 2 numbers
+3. Multiplication --- * :: product of 2 numbers
+4. Division --- / :: Quotient 
+5. Modulous --- % :: Reminder
+ 
+
+     2) 40 ( 20 - Quotient
+        40
+    -------
+        0 -- Reminder
+    -------
+
+Increment & Decrement Operators ::
+
+++ :: Increment Operator ::
+
+x :: 
+
+x++ :: Post increment -- Value is used, then increment
+++x :: Pre increment -- Value increased , then value used
+
+
+-- :: 
+
+--x :: pre Decrement
+x-- :: post decrement
+
+
+Logical Operators ::  Boolean - true/false
+
+Logical AND :: &&  -- true, if all inputs are true, else false
+Logical OR :: || --- false if all inputs are false, else true
+Logical NOT :: ! --- !true = false.... !false = true
+
+
+AND operator :: 
+
+ope1  &&    ope2    =   output
+true        true    =   true
+true        false   =   false
+false       true    =   false
+false       false   =   false
+
+OR operator :: 
+
+ope1  ||    ope2    =   output
+true        true    =   true
+true        false   =   true
+false       true    =   true
+false       false   =   false
+
+Comparison Operators :: boolean -- true/false
+
+equal --- == --- to check equality value of inputs.
+!= --- 
+lessthan -- < ---- 
+greterthan --- > ---- 
+<= - 
+>= -- 
+
+=== --- strictly equal -- value and type
+
+!== --- not strictly equal -- 
+
+Ternary OR Conditional Operator :: ?
+
+let message = condition ? if true value1 : if false value2;
+
+
+let age = 18;
+
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result); // "Adult"
+
+
+
+Conditional Statements :: 
+
+if ---- else :: Only one condition.
+
+if(condition)
+{
+
+// true
+
+}
+else {
+
+// false
+
+}
+
+if -- else if -- two or more conditions -- 
+
+if(condition1){
+//
+}
+else if(condition2){
+//
+}
+else if(condition3){
+//
+}
+else{
+    // 
+}
+
+switch case :: depends on expression 
+
+
+switch(expression){
+
+    case expression1:
+    log();
+    break;
+
+    case expression2:
+    ////
+    break;
+
+    case expression3:
+    log();
+    break;
+
+    case expression4:
+    ////
+    break;
+
+    default:
+    /// 
+
+}
+
+
+
+Loops :: 
+
+for :: number of iteration
+
+
+for(initialization; condition; increment/decrement)
+{
+
+//
+//
+//
+
+}
+
+
+
+while :: condition :: true
+
+while(condition){
+// Statements
+
+}
+
+do-while :: true
+
+do{
+    // Statements
+}
+while(condition)
+
+for of :: Array
+
+for in :: Object/Dictionary
+
+
+String :: 
+
+1. '' ---- 'hjsvvsdhvdsahjvdsh32443453425' ---- '123456' ---- 
+2. "" ----  "dsfmfnkjsdfkjads121432432" ------ "3432432534534" ----- 
+3. `` (Backlit) ---- `dsjhfhdsfjsuf234234324` ---- `12345` --- Template Literals
+
+
+
+Array :: Multiple data of any type
+
+
+'chandra', 35, 'India', 9912127022, true
+
+name, age, country, pno
+
+const namearray = [val1, val2, val3, val4,.......]
+
+const array1 = ['chandra', 35, 'India', 9912127022, true];
+
+0, length()-1
+
+array1[index]
+
+
+
+array literal :: 
+
+const array1:(string | number)[] = ['chandra', 35, 'India', 9912127022, true];
+
+
+
+new keyword :: 
+
+const arr2 = new Array(){
+
+    'chandra', 35, 'India', 9912127022, true;
+}
+
+
+Generic Type :: 
+
+
+const empNames: Array<string> = ["john", "smith", "peter", "scott"]; // Array of strings
+
+const empIds: Array<number> = [101, 102, 103, 104]; // Array of numbers
+
+const data: Array<string | number> = ["john", "smith", 101, 102]; // Union type (string or number)
+
+const data2: Array<any> = [1, "john", true, null]; // Array allowing multiple data types
+
+// for in loop
+
+for (let index in fruits) {
+    console.log(fruits[index]);  // output: Apple Orange Banana
+}
+
+
+Object :: 
+
+behavior - properties
+
+virtual machine - 
+
+key: value pair.
+
+Object Literals
+new keyword
+
+
+const person = {
+name: 'Chandra',
+age: 35,
+city: 'Hyderabad',
+country: 'India'
+
+}
+
+
+let employee: {
+  firstName: string;
+  lastName: string;
+  age: number;
+  jobTitle: string;
+} = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 25,
+  jobTitle: 'Web Developer'
+};
+
+class Person {
+
+    constructor(public name: string, public age: number, public city: string){
+    this.name = name;
+    this.age = age;
+    this.city = city;
+    }
+
+getName(){
+    retun this.name;
+}
+
+getAge(){
+    return this.age;
+}
+
+getCity(){
+    return this.city;
+}
+
+
+getDetails(){
+
+    log(`${this.name} : ${this.age} : ${this.city}`);
+}
+
+
+}
+
+// Creating a new instance of Person
+let person1 = new Person('Evan', 30, 'Paris');
+let person2 = new Person('Anupam', 25, 'Delhi');
+let person3 = new Person('Rathna', 34, 'Hyderabad');
+
+
+Functions :: 
+
+
+
+browser - 
+context - 
+page - 
+
+============================================================
+
+npx playwright test
+
+await expect(locator).toHaveTitle();
+
+Locators :: 
+
+1. id
+2. class
+3. css
+4. xpath
+5. text
+6. link text
+7. name
+
+css :: 
+
+1. id attribute - #valueofID
+
+#email,  #flash-messages
+
+2. id and tagname :: tagname#valueofId    --- input#name   select#dropdown
+
+3. class :: .classValue -- .form-control
+
+4. tagname and class :: tagname.vlaueclass   ---- input.form-control
+
+5. tagname and other attributes :: tagname[attribute='value'][attribute='value']
+
+input[placeholder="First Name"]
+
+input[placeholder='First Name']
+
+textarea[ng-model='Adress']
+textarea[ng-model='Adress'][rows='3']
+input[ng-model='EmailAdress'][type='email']
+
+xpath ::
+
+1. Absolute xpath :: /
+
+/html/body/section/div/div/div[2]/form/div[1]/div[1]/input
+
+/html/body/section/div/div[2]
+
+2. Relative xpath :: //
+
+//tagname[@attributename='attributevalue']
+
+//input[@placeholder="First Name"]
+
+//div[@class="container center"]
+
+//input[@ng-model="EmailAdress"]
+
+
+
+text() :: //tagname[text()='Register']
+
+Locate all the links in page :: For the links tag is - a - anchor tag
+
+//a -- Locates all the links in a page.
+
+//a[text()='Interactions '] -- Specific link in a page.
+
+Automation Demo Site 
+
+//button[contains(text(),'Submit')]
+
+//h1[contains(text(), 'Automation')]
+
+<a href="Index.html">Home</a>
+
+//input[starts-with(@id,'user_')]
+
+//input[starts-with(@ng-model, "Email")]
+
+//input[starts-with(@id,'user_')]
+
+//input[@type='email' and @name='userEmail']
+
+//label[text()='Email']/following-sibling::input
+
+//input[@placeholder="First Name"]/following::input[1]
+
+//input[@placeholder="First Name"]/preceeding::input[1]
+
+//input[@placeholder="Last Name"]/preceding::input
+
+//textarea[@ng-model="Adress"]/preceding::input[2]
+
+
+getByRole, getByText, getByLabel, getByPlaceHolder.....
+
+
+// Locate some element - perform some action 
+
+Text Field :: 
+
+Editable, Insert data, capture text, remove.
+
+npx playwright test 
+
+npx playwright test filename.spec.ts
+
+page.locator('#name');
+
+page.locator('css = #name').fill('Chandra');
+
+
+fill()
+
+textContent()
+
+
+Click() ::
+
+click() - text field,  button, link, dropdown, radio button,
+
+
+Core Locators ::
+
+Radio Button :: check();
+
+Check Box :: check();
+
+
+Handling Dropdown ::
+
+select - tag
+
+
+Get screenshot ::
+
+screenshot();
+
+Drag and Drop ::
+
+File Upload :: 
+
+setInputFiles('path'); 
+
+setInputFiles(['path1','path2','path3']);
+
+setInputFiles([]);
+
+==================================================
+
+Handle frames ::
+
+
+page
+
+
+frame(url: '') ::
+
+array - 
+
+frameLocator("")
+
+==================================================
+
+Handling Alerts ::
+
+Simple Alerts - OK
+
+Confirmation Alerts - OK and Cancel
+
+Prompt Alert - Textbox, Ok, Cancel
+
+page.on('dialog', async dialog => {
+        console.log('Dialog message is :: ', dialog.message());
+        console.log('Dialog type is :: ', dialog.type());
+        expect.soft(dialog.message()).toBe('I am a JS Confirm');
+        expect.soft(dialog.type()).toBe('confirm');
+        await dialog.accept(); // to click OK
+        // await dialog.dismiss(); // to click cancel
+});
+button.click(); --- opens popup
+
+===========================================================
+
+Handling Web table ::  
+
+
+--------------------------------- 1
+
+--------------------------------2
+
+--------------------------------3
+
+(1, 1)
+(2, 1)
+
+(3, 4)
+
+============================================================
+
+Multiple Browser Windows - 
+
+title - 
+
+window handles - 
+
+window id - 
+
+
+============================================================
+
+Browser Navigations ::
+
+=======================================
+
+// 5 sec
+expect :: 
+
+Assertion OR Verfication ::
+
+Hard Assertion :: failed - execution terminated
+
+Soft Assertion :: failed - continue execution
+
+===========================================================
+
+Date Picker - Calenders ::
+
+
+
+==========================================
+

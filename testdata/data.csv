@@ -1,0 +1,4 @@
+sno,email,password,validity
+Data1,gomasachandrashekhar@gmail.com,Gomasa@1988,valid
+Data2,gomasachandrashek@gmail.com,Gomasa@1988,invalid
+Data3,gomasachandrashekhar@gmail.com,Gomasa@19881,invalid
