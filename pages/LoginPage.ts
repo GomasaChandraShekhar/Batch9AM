@@ -18,7 +18,6 @@ export class LoginPage extends PageObjects {
       await this.userName.fill( email );
       await this.userPassword.fill( password );
       await this.loginButton.click();
-      await this.page.waitForTimeout( 5000);
     await expect.soft( this.successMessage ).toBeVisible();
     await expect.soft( this.signOutButton ).toBeVisible();
   }
