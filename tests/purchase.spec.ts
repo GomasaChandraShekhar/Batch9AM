@@ -10,10 +10,9 @@ const filePath = './testdata/PlaceOrder.json';
 const jsondata: any = readFiles.readJsonFile( filePath );
 
 test.describe( `E2E Purchase Flow`, { tag: [ "@Smoke", '@Regression' ] }, () => {
-
   for ( const { prodName, country } of jsondata ) {
 
-    test.beforeEach( async ( { page } ) => {
+    test.beforeAll( async ( { page } ) => {
       pom = new PageObjectManager( page );
       await pom.loginPage.goto( pom.testData.url );
       await pom.loginPage.login( pom.testData.email, pom.testData.password );
@@ -30,7 +29,7 @@ test.describe( `E2E Purchase Flow`, { tag: [ "@Smoke", '@Regression' ] }, () => 
       await pom.placeOrderPage.clickViewOrdersButton();
     } );
 
-    test.afterEach( async () => {
+    test.afterAll( async () => {
       await pom.loginPage.signOut();
     } );
 
