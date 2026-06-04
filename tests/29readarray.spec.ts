@@ -15,14 +15,17 @@ test(`Click on link`, async ({ page }) => {
     await page.close();
 
 });
+
 */
 // Read data from one dimensional array
 /*
 const titles: string[] = ['Books', 'Computers', 'Electronics', 'Jewelry', 'Gift Cards'];
 
+for (const title of titles) {
+
 test.describe("Verify links", () => {
 
-    for (const title of titles) {
+    
 
         test(`Click on ${title} link`, async ({ page }) => {
             await page.goto('https://demowebshop.tricentis.com/');
@@ -37,8 +40,10 @@ test.describe("Verify links", () => {
             await page.waitForTimeout(3000);
             await page.close();
         });
-    }
+    
 });
+
+}
 */
 
 // Read data from two dimensional array
@@ -49,38 +54,40 @@ const loginData: string[][] = [
     ['Data3', 'gomasachandrashekhar@gmail.com', 'Gomasa@198811', 'invalid']
 ];
 
-test.describe("Verify login", async () => {
+for ( const [ data, email, password, flag ] of loginData ) {
 
-    for (const [data, email, password, flag] of loginData) {
+    test.describe( "Verify login", async () => {
 
-        test(`Login Test for ${data} `, async ({ page }) => {
-            await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
-            await page.waitForTimeout(2000);
+    
+
+        test( `Login Test for ${data} `, async ( { page } ) => {
+            await page.goto( 'https://rahulshettyacademy.com/client/#/auth/login' );
+            await page.waitForTimeout( 2000 );
             // await page.pause();
 
-            await page.locator('#userEmail').fill(email);
-            await page.locator('#userPassword').fill(password);
-            await page.locator('#login').click();
+            await page.locator( '#userEmail' ).fill( email );
+            await page.locator( '#userPassword' ).fill( password );
+            await page.locator( '#login' ).click();
 
-            if (flag == 'valid') {
-                await page.waitForTimeout(2000);
-                await expect.soft(page.getByRole('button', { name: 'HOME' })).toBeVisible();
-                await expect.soft(page.getByText('Automation Practice')).toBeVisible();
-                const signOutButton = page.getByRole('button', { name: 'Sign Out' });
-                await expect.soft(signOutButton).toBeVisible();
+            if ( flag == 'valid' ) {
+                await page.waitForTimeout( 2000 );
+                await expect.soft( page.getByRole( 'button', { name: 'HOME' } ) ).toBeVisible();
+                await expect.soft( page.getByText( 'Automation Practice' ) ).toBeVisible();
+                const signOutButton = page.getByRole( 'button', { name: 'Sign Out' } );
+                await expect.soft( signOutButton ).toBeVisible();
                 await signOutButton.click();
             }
-            else if (flag == 'invalid') {
-                const errorMessage = page.locator('div#toast-container');
-                await expect.soft(errorMessage).toBeVisible();
-                console.log(await errorMessage.innerText());
+            else if ( flag == 'invalid' ) {
+                const errorMessage = page.locator( 'div#toast-container' );
+                await expect.soft( errorMessage ).toBeVisible();
+                console.log( await errorMessage.innerText() );
             }
-            await page.waitForTimeout(2000);
+            await page.waitForTimeout( 2000 );
             await page.close();
-        });
-    }
-});
-
+        } );
+    
+    } );
+}
 
 /*
 test(`Login Test`, async ({ page }) => {
